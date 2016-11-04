@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>Easy Deploy</value>
+  </data>
+  <data name="RibbonFile" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="TabStart" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="AddAction" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="GroupActions" xml:space="preserve">
+    <value>Aktionen</value>
+  </data>
+  <data name="GroupConfigFile" xml:space="preserve">
+    <value>Konfiguration</value>
+  </data>
+  <data name="LoadConfig" xml:space="preserve">
+    <value>Laden</value>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>Nach unten</value>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>Nach oben</value>
+  </data>
+  <data name="NewConfig" xml:space="preserve">
+    <value>Neu</value>
+  </data>
+  <data name="SaveConfig" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="RemoveAction" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="DeployActionCopyFile" xml:space="preserve">
+    <value>Datei kopieren</value>
+  </data>
+  <data name="DeployActionExecuteFile" xml:space="preserve">
+    <value>Datei ausführen</value>
+  </data>
+  <data name="DeployActionRemoveFile" xml:space="preserve">
+    <value>Datei löschen</value>
+  </data>
+  <data name="ButtonDelete" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="Override" xml:space="preserve">
+    <value>Überschreiben falls vorhanden</value>
+  </data>
+  <data name="SourceFile" xml:space="preserve">
+    <value>Quell-Datei</value>
+  </data>
+  <data name="TargetFile" xml:space="preserve">
+    <value>Ziel-Datei</value>
+  </data>
+  <data name="BrowseFile" xml:space="preserve">
+    <value>Auswählen</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Informationen</value>
+  </data>
+  <data name="CloseConfigurationMessage" xml:space="preserve">
+    <value>Soll die aktuelle Konfiguration wirklich geschlossen werden? Alle ungespeicherten Änderungen gehen verloren!</value>
+  </data>
+  <data name="CloseConfigurationTitle" xml:space="preserve">
+    <value>Bestätigen</value>
+  </data>
+  <data name="NoContinue" xml:space="preserve">
+    <value>Nein, weiterarbeiten</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="IsSoftFailureEnabled" xml:space="preserve">
+    <value>Bei Fehlern fortfahren</value>
+  </data>
+  <data name="IsSoftFailureEnabledHelpText" xml:space="preserve">
+    <value>Wenn aktiviert, wird der Runner im Falle eines Fehlers weitere Aufgaben ausführen.</value>
+  </data>
+  <data name="CurrentConfiguration" xml:space="preserve">
+    <value>Aktuelle Konfiguration</value>
+  </data>
+</root>
