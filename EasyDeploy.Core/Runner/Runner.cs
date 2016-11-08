@@ -26,7 +26,7 @@ namespace EasyDeploy.Core.Runner
             this.jsonReader = jsonReader;
 
             Runners.Add(new CopyFileDeployActionRunner());
-            Runners.Add(new RemoveFileDeployActionRunnter());
+            Runners.Add(new RemoveFileDeployActionRunner());
             Runners.Add(new ExecuteFileDeployActionRunner());
         }
 

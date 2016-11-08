@@ -70,7 +70,7 @@
     <Compile Include="Runner\ActionRunner\DeployActionRunner.cs" />
     <Compile Include="Runner\ActionRunner\ExecuteFileDeployActionRunner.cs" />
     <Compile Include="Runner\ActionRunner\IDeployActionRunner.cs" />
-    <Compile Include="Runner\ActionRunner\RemoveFileDeployActionRunnter.cs" />
+    <Compile Include="Runner\ActionRunner\RemoveFileDeployActionRunner.cs" />
     <Compile Include="Runner\IRunner.cs" />
     <Compile Include="Runner\Runner.cs" />
     <Compile Include="Runner\ActionRunner\UnzipDeployActionRunner.cs" />

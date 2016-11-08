@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyDeploy.GUI.Test", "Easy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyDeploy.CLI", "EasyDeploy.CLI\EasyDeploy.CLI.csproj", "{5B115F92-7B5B-4F26-87C7-FCD1F284C758}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyDeploy.Core.Test", "EasyDeploy.Core.Test\EasyDeploy.Core.Test.csproj", "{985A074C-9758-4FAC-BA90-E53166022200}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5B115F92-7B5B-4F26-87C7-FCD1F284C758}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B115F92-7B5B-4F26-87C7-FCD1F284C758}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B115F92-7B5B-4F26-87C7-FCD1F284C758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{985A074C-9758-4FAC-BA90-E53166022200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985A074C-9758-4FAC-BA90-E53166022200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985A074C-9758-4FAC-BA90-E53166022200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985A074C-9758-4FAC-BA90-E53166022200}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

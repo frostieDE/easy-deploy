@@ -3,7 +3,7 @@ using System.IO;
 
 namespace EasyDeploy.Core.Runner.ActionRunner
 {
-    public class RemoveFileDeployActionRunnter : DeployActionRunner<RemoveFileDeployAction>
+    public class RemoveFileDeployActionRunner : DeployActionRunner<RemoveFileDeployAction>
     {
         protected override void Run(RemoveFileDeployAction action)
         {
