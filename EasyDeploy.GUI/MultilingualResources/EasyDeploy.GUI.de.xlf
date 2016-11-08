@@ -130,6 +130,18 @@
           <source>Current configuration</source>
           <target state="translated">Aktuelle Konfiguration</target>
         </trans-unit>
+        <trans-unit id="DeployActionUnzip" translate="yes" xml:space="preserve">
+          <source>Unzip file</source>
+          <target state="translated">ZIP-Datei entpacken</target>
+        </trans-unit>
+        <trans-unit id="DestinationDirectory" translate="yes" xml:space="preserve">
+          <source>Destination</source>
+          <target state="translated">Ziel</target>
+        </trans-unit>
+        <trans-unit id="ZipFile" translate="yes" xml:space="preserve">
+          <source>ZIP file</source>
+          <target state="translated">ZIP Datei</target>
+        </trans-unit>
       </group>
     </body>
   </file>

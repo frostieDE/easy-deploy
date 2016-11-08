@@ -13,6 +13,8 @@ namespace EasyDeploy.GUI.Selector
 
         public DataTemplate ExecuteFileDeployActionTemplate { get; set; }
 
+        public DataTemplate UnzipDeployActionTemplate { get; set; }
+
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
             if (item is CopyFileDeployAction)
@@ -26,6 +28,10 @@ namespace EasyDeploy.GUI.Selector
             else if (item is ExecuteFileDeployAction)
             {
                 return ExecuteFileDeployActionTemplate;
+            }
+            else if (item is UnzipDeployAction)
+            {
+                return UnzipDeployActionTemplate;
             }
 
             if (item != null)

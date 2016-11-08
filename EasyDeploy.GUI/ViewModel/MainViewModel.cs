@@ -155,6 +155,7 @@ namespace EasyDeploy.GUI.ViewModel
             PossibleDeployActions.Add(new CopyFileDeployAction());
             PossibleDeployActions.Add(new RemoveFileDeployAction());
             PossibleDeployActions.Add(new ExecuteFileDeployAction());
+            PossibleDeployActions.Add(new UnzipDeployAction());
         }
 
         private async void CreateNewConfiguration()

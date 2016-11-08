@@ -150,8 +150,14 @@
   <data name="DeployActionRemoveFile" xml:space="preserve">
     <value>Remove file</value>
   </data>
+  <data name="DeployActionUnzip" xml:space="preserve">
+    <value>Unzip file</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>Description</value>
+  </data>
+  <data name="DestinationDirectory" xml:space="preserve">
+    <value>Destination</value>
   </data>
   <data name="File" xml:space="preserve">
     <value>File</value>
@@ -209,5 +215,8 @@
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Yes</value>
+  </data>
+  <data name="ZipFile" xml:space="preserve">
+    <value>ZIP file</value>
   </data>
 </root>

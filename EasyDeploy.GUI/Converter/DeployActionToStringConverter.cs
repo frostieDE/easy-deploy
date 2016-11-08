@@ -24,6 +24,10 @@ namespace EasyDeploy.GUI.Converter
             {
                 return Resources.DeployActionExecuteFile;
             }
+            else if (deployAction is UnzipDeployAction)
+            {
+                return Resources.DeployActionUnzip;
+            }
 
             return "N/A";
         }

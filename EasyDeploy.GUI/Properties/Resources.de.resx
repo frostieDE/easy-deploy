@@ -105,4 +105,13 @@
   <data name="CurrentConfiguration" xml:space="preserve">
     <value>Aktuelle Konfiguration</value>
   </data>
+  <data name="DeployActionUnzip" xml:space="preserve">
+    <value>ZIP-Datei entpacken</value>
+  </data>
+  <data name="DestinationDirectory" xml:space="preserve">
+    <value>Ziel</value>
+  </data>
+  <data name="ZipFile" xml:space="preserve">
+    <value>ZIP Datei</value>
+  </data>
 </root>

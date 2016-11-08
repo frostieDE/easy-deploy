@@ -227,6 +227,34 @@
                                     </Grid>
                                 </DataTemplate> 
                             </selector:DeployActionTemplateSelector.RemoveFileDeployActionTemplate>
+
+                            <selector:DeployActionTemplateSelector.UnzipDeployActionTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock Text="{x:Static l10n:Resources.ZipFile}"
+                                                   Style="{StaticResource TextBoxLabelTextBlock}" />
+
+                                        <TextBox Text="{Binding ZipFile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                 Style="{StaticResource DefaultTextBox}"
+                                                 Grid.Row="1" />
+
+                                        <TextBlock Text="{x:Static l10n:Resources.DestinationDirectory}"
+                                                   Style="{StaticResource TextBoxLabelTextBlock}"
+                                                   Grid.Row="2" />
+
+                                        <TextBox Text="{Binding Destination, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                 Style="{StaticResource DefaultTextBox}"
+                                                 Grid.Row="3" />
+                                    </Grid>
+                                </DataTemplate>
+                            </selector:DeployActionTemplateSelector.UnzipDeployActionTemplate>
                         </selector:DeployActionTemplateSelector>
                     </ContentControl.ContentTemplateSelector>
                 </ContentControl>

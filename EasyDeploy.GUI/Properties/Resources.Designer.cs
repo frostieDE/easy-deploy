@@ -160,11 +160,29 @@ namespace EasyDeploy.GUI.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Unzip file ähnelt.
+        /// </summary>
+        public static string DeployActionUnzip {
+            get {
+                return ResourceManager.GetString("DeployActionUnzip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Description ähnelt.
         /// </summary>
         public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Destination ähnelt.
+        /// </summary>
+        public static string DestinationDirectory {
+            get {
+                return ResourceManager.GetString("DestinationDirectory", resourceCulture);
             }
         }
         
@@ -336,6 +354,15 @@ namespace EasyDeploy.GUI.Properties {
         public static string Yes {
             get {
                 return ResourceManager.GetString("Yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die ZIP file ähnelt.
+        /// </summary>
+        public static string ZipFile {
+            get {
+                return ResourceManager.GetString("ZipFile", resourceCulture);
             }
         }
     }
