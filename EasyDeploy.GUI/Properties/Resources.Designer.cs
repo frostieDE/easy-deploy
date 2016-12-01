@@ -79,6 +79,15 @@ namespace EasyDeploy.GUI.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Arguments ähnelt.
+        /// </summary>
+        public static string Arguments {
+            get {
+                return ResourceManager.GetString("Arguments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Browse ähnelt.
         /// </summary>
         public static string BrowseFile {

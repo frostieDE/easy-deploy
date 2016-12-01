@@ -1,4 +1,5 @@
 ﻿using EasyDeploy.Core.Model;
+using System;
 using System.Diagnostics;
 using System.IO;
 
@@ -14,7 +15,7 @@ namespace EasyDeploy.Core.Runner.ActionRunner
                 processStartInfo.Arguments = action.Arguments;
                 processStartInfo.FileName = action.File;
                 processStartInfo.CreateNoWindow = false;
-                processStartInfo.UseShellExecute = true;
+                processStartInfo.UseShellExecute = false;
                 processStartInfo.WindowStyle = ProcessWindowStyle.Hidden;
 
                 using (var process = Process.Start(processStartInfo))

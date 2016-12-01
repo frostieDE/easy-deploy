@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define UpgradeGuid="{F929387F-71CF-4160-9A83-BAD056565F80}" ?>
+
+  <Product Id="*" Name="EasyDeploy CLI" Language="1033"
+           Version="1.0.0.0" Manufacturer="EasyDeploy"
+           UpgradeCode="$(var.UpgradeGuid)">
+
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <Media Id="1" Cabinet="data.cab" EmbedCab="yes" />
+
+    <!-- Icon -->
+    <Icon Id="icon.ico" SourceFile="icon.ico" />
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+    <!-- Application directory -->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="CompanyFolder" Name="EasyDeploy">
+          <Directory Id="INSTALLLOCATION" Name="EasyDeploy CLI">
+            <Component Id="ProductComponent" Guid="65992CB2-A706-4F05-B00D-E9A3D6FC1147">
+              <Environment Id="PATH" Name="PATH" Value="[INSTALLLOCATION]" Permanent="no" Part="last" Action="set" System="yes" />
+              <File Id="EasyDeploy.CLI.exe" Name="EasyDeploy.exe" Source="$(var.EasyDeploy.CLI.TargetDir)EasyDeploy.CLI.exe" />
+            </Component>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <Feature Id="ProductFeature" Title="Application" Description="CLI application" Level="1">
+      <ComponentRef Id="ProductComponent" />
+    </Feature>
+
+    <!-- UI -->
+    <UIRef Id="WixUI_Minimal" />
+    <UIRef Id="WixUI_Common" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+
+    <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
+  </Product>
+</Wix>

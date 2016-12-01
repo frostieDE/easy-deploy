@@ -198,6 +198,8 @@
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="Auto" />
                                             <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
                                         </Grid.RowDefinitions>
 
                                         <TextBlock Text="{x:Static l10n:Resources.File}"
@@ -206,6 +208,14 @@
                                         <TextBox Text="{Binding File, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                                  Style="{StaticResource DefaultTextBox}"
                                                  Grid.Row="1" />
+
+                                        <TextBlock Text="{x:Static l10n:Resources.Arguments}"
+                                                   Style="{StaticResource TextBoxLabelTextBlock}"
+                                                   Grid.Row="2"/>
+
+                                        <TextBox Text="{Binding Arguments, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                 Style="{StaticResource DefaultTextBox}"
+                                                 Grid.Row="3" />
                                     </Grid>
                                 </DataTemplate>
                             </selector:DeployActionTemplateSelector.ExecuteFileDeployActionTemplate>

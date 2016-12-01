@@ -2,16 +2,16 @@
 
 namespace EasyDeploy.Core.Logger
 {
-    public class ConsoleLogger : ILogger
+    public class DebugLogger : ILogger
     {
         public void Exception(Exception exception)
         {
-            Log(exception.Message); // TODO: better :-)
+            Log(exception.Message);
         }
 
         public void Log(string message)
         {
-            Console.WriteLine(message);
+            System.Diagnostics.Debug.WriteLine(message);
         }
     }
 }

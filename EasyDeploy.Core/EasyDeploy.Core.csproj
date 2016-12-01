@@ -46,12 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IO\ISpecialFoldersHelper.cs" />
+    <Compile Include="IO\SpecialFoldersHelper.cs" />
     <Compile Include="Json\Converter\DeviceTypeConverter.cs" />
+    <Compile Include="Json\DebugJsonReader.cs" />
+    <Compile Include="Logger\DebugLogger.cs" />
+    <Compile Include="Logger\FileLogger.cs" />
     <Compile Include="Model\DeployAction.cs" />
     <Compile Include="Model\Configuration.cs" />
     <Compile Include="Model\CopyFileDeployAction.cs" />
     <Compile Include="Model\ExecuteFileDeployAction.cs" />
     <Compile Include="Model\RemoveFileDeployAction.cs" />
+    <Compile Include="Model\RemoveFolderDeployAction.cs" />
     <Compile Include="Model\UnzipDeployAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IO\FileReader.cs" />
@@ -71,6 +77,7 @@
     <Compile Include="Runner\ActionRunner\ExecuteFileDeployActionRunner.cs" />
     <Compile Include="Runner\ActionRunner\IDeployActionRunner.cs" />
     <Compile Include="Runner\ActionRunner\RemoveFileDeployActionRunner.cs" />
+    <Compile Include="Runner\ActionRunner\RemoveFolderDeployActionRunner.cs" />
     <Compile Include="Runner\IRunner.cs" />
     <Compile Include="Runner\Runner.cs" />
     <Compile Include="Runner\ActionRunner\UnzipDeployActionRunner.cs" />

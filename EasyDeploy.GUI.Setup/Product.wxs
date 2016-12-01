@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define UpgradeGuid="5AECDD66-B2EC-417D-B929-67366827C806" ?>
+
+  <Product Id="*" Name="EasyDeploy" Language="1033"
+           Version="1.0.0.0" Manufacturer="EasyDeploy"
+           UpgradeCode="$(var.UpgradeGuid)">
+    
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <Media Id="1" Cabinet="data.cab" EmbedCab="yes" />
+
+    <!-- Icon -->
+    <Icon Id="icon.ico" SourceFile="icon.ico" />
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+    <!-- Application Directory -->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="CompanyFolder" Name="EasyDeploy">
+          <Directory Id="INSTALLLOCATION" Name="EasyDeploy GUI">
+            <Component Id="ProductComponent" Guid="41AD6529-AF80-4670-998E-1EF1E3654209">
+              <File Id="EasyDeploy.GUI.exe" Name="EasyDeploy.exe" Source="$(var.EasyDeploy.GUI.TargetDir)EasyDeploy.GUI.exe">
+                <Shortcut Id="DesktopShortcut" Advertise="yes" Name="Easy Deploy (GUI)" Directory="DesktopFolder" WorkingDirectory="INSTALLLOCATION" Description="Shortcut (Desktop)">
+                  <Icon Id="Icon.exe" SourceFile="$(var.EasyDeploy.GUI.TargetPath)"/>
+                </Shortcut>
+              </File>
+
+              <File Id="ApplicationIcon" Name="icon.ico" Source="$(var.EasyDeploy.GUI.TargetDir)icon.ico" />
+
+              <File Name="ControlzEx.dll" Source="$(var.EasyDeploy.GUI.TargetDir)" />
+              <File Name="EasyDeploy.Core.dll" Source="$(var.EasyDeploy.GUI.TargetDir)" />
+              <File Name="Fluent.dll" Source="$(var.EasyDeploy.GUI.TargetDir)" />
+              <File Name="GalaSoft.MvvmLight.dll" Source="$(var.EasyDeploy.GUI.TargetDir)" />
+              <File Name="Galasoft.MvvmLight.Extras.dll" Source="$(var.EasyDeploy.GUI.TargetDir)" />
+              <File Name="GalaSoft.MvvmLight.Platform.dll" Source="$(var.EasyDeploy.GUI.TargetDir)" />
+              <File Name="MaterialDesignColors.dll" Source="$(var.EasyDeploy.GUI.TargetDir)" />
+              <File Name="Microsoft.Practices.ServiceLocation.dll" Source="$(var.EasyDeploy.GUI.TargetDir)" />
+              <File Name="Microsoft.WindowsAPICodePack.dll" Source="$(var.EasyDeploy.GUI.TargetDir)" />
+              <File Name="Microsoft.WindowsAPICodePack.Shell.dll" Source="$(var.EasyDeploy.GUI.TargetDir)" />
+              <File Name="Newtonsoft.Json.dll" Source="$(var.EasyDeploy.GUI.TargetDir)" />
+              <File Name="System.Windows.Interactivity.dll" Source="$(var.EasyDeploy.GUI.TargetDir)" />
+            </Component>
+
+            <Directory Id="GermanLanguageDir" Name="de">
+              <Component Id="GermanLanguage" Guid="BD852017-194E-4A5B-AA54-4A8FF2F57996">
+                <File Name="EasyDeploy.GUI.resources.dll" Source="$(var.EasyDeploy.GUI.TargetDir)de/EasyDeploy.GUI.resources.dll" />
+              </Component>
+            </Directory>
+          </Directory>
+
+          <Directory Id="CLILOCATION" Name="EasyDeploy CLI">
+            <Component Id="CliComponent" Guid="E4AA0E06-0BA2-4CE2-BA78-7DF0BF210943">
+              <File Name="EasyDeploy.exe" Source="$(var.EasyDeploy.CLI.TargetDir)EasyDeploy.CLI.exe" />
+            </Component>
+          </Directory>
+        </Directory>
+      </Directory>
+
+      <!-- Startmenu -->
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="MyShortCutsDir" Name="EasyDeploy">
+          <Component Id="ShortCutComponent" Guid="4F621E6D-B884-4BA3-9076-BCD2D22B4C52">
+            <Shortcut Id="ApplicationShortCut" Name="EasyDeploy (GUI)" Target="[INSTALLLOCATION]EasyDeploy.exe" />
+            <RemoveFolder Id="RemoveMyShortCuts" On="uninstall" />
+            <RegistryValue Root="HKCU" Key="Software\EasyDeploy\EasyDeployGUI" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+          </Component>
+        </Directory>
+      </Directory>
+      
+      <!-- Desktop -->
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+    
+    <Feature Id="ProductFeature" Title="Application" Description="Main application to create deployment tasks" Level="1">
+      <ComponentRef Id="ProductComponent" />
+      <ComponentRef Id="ShortCutComponent" />
+    </Feature>
+
+    <Feature Id="CliFeature" Title="EasyDeploy CLI" Level="1" Description="Installs the runner which is used for client installatins">
+      <ComponentRef Id="CliComponent" />
+    </Feature>
+
+    <Feature Id="LanguageFeature" Title="Translations" Level="1" Description="Translations">
+      <ComponentRef Id="GermanLanguage" />
+    </Feature>
+    
+    <!-- UI -->
+    <UIRef Id="WixUI_FeatureTree" />
+    <UIRef Id="WixUI_Common" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+
+    <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
+	</Product>
+</Wix>

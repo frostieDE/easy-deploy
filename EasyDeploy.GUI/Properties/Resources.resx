@@ -123,6 +123,9 @@
   <data name="AppName" xml:space="preserve">
     <value>Easy Deploy</value>
   </data>
+  <data name="Arguments" xml:space="preserve">
+    <value>Arguments</value>
+  </data>
   <data name="BrowseFile" xml:space="preserve">
     <value>Browse</value>
   </data>

@@ -142,6 +142,10 @@
           <source>ZIP file</source>
           <target state="translated">ZIP Datei</target>
         </trans-unit>
+        <trans-unit id="Arguments" translate="yes" xml:space="preserve">
+          <source>Arguments</source>
+          <target state="new">Arguments</target>
+        </trans-unit>
       </group>
     </body>
   </file>

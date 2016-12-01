@@ -38,7 +38,7 @@ namespace EasyDeploy.Core.Runner
             logger.Log("JSON file loaded");
             logger.Log("Parse JSON file");
 
-            configuration = jsonReader.ReadJson<Configuration>(file);
+            configuration = jsonReader.ReadJson<Configuration>(json);
 
             logger.Log("JSON file parsed");
         }
