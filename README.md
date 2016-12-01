@@ -18,7 +18,14 @@ Currently, the following type of steps are supported:
 * to be continued :-)
 
 ### EasyDeploy CLI
-The actual command line tool which executes steps described in the JSON file. 
+The actual command line tool which executes steps described in the JSON file.
+
+#### Usage
+Simply run
+
+    $ EasyDeploy.exe -c Path\To\install.json
+    
+from `cmd` or `powershell`.
 
 ### Setup
 The setup projects are WiX projects which are used to create MSI files (which can also be deployed
